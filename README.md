@@ -4,6 +4,7 @@
 
 ## Features
 
+- Zero dependencies
 - Written in TypeScript
 - High DPI screens support
 - SSR support
@@ -22,17 +23,18 @@ yarn add react-spinning-canvas-wheel
 ## Usage
 
 ```tsx
+import { useRef } from 'react';
 import SpinningWheel, {
   SpinningWheelRef,
   WheelSegment,
-} from "react-spinning-canvas-wheel";
+} from 'react-spinning-canvas-wheel';
 
 const SEGMENTS: WheelSegment[] = [
-  { title: "Metal Gear Solid" },
-  { title: "Dark Souls 2" },
-  { title: "Escape From Tarkov" },
-  { title: "It Takes Two" },
-  { title: "Resident Evil Village" },
+  { title: 'Metal Gear Solid' },
+  { title: 'Dark Souls 2' },
+  { title: 'Escape From Tarkov' },
+  { title: 'It Takes Two' },
+  { title: 'Resident Evil Village' },
 ];
 
 const Wheel = () => {
@@ -49,11 +51,11 @@ const Wheel = () => {
       </button>
       <SpinningWheel
         size={640}
-        segments={segments}
+        segments={SEGMENTS}
         spinningWheelRef={spinningWheelRef}
-        onSegmentChange={(index) => console.log("currentSegmentIndex:", index)}
-        onSpinStart={() => console.log("started")}
-        onSpinEnd={(winnerIndex) => console.log("winnerIndex:", winnerIndex)}
+        onSegmentChange={(index) => console.log('currentSegmentIndex:', index)}
+        onSpinStart={() => console.log('started')}
+        onSpinEnd={(winnerIndex) => console.log('winnerIndex:', winnerIndex)}
       />
     </div>
   );
