@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "name": "react-spinning-canvas-wheel",
+  "author": "DmitryScaletta",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "d3-ease": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/d3-ease": "^3.0.0",
+    "@types/react": "^17.0.34",
+    "react": "^17.0.2",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  }
+}
